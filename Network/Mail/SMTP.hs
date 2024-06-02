@@ -93,7 +93,7 @@ connectSMTPSTARTTLS :: HostName     -- ^ name of the server
 connectSMTPSTARTTLS hostname = connectSMTPSTARTTLS' hostname 587
 
 defaultTlsSettings :: Conn.TLSSettings
-defaultTlsSettings =  Conn.TLSSettingsSimple False False False
+defaultTlsSettings =  Conn.TLSSettingsSimple False False False def
 
 -- | Connect to an SMTP server with the specified host via SMTPS on port (465).
 -- According to RFC 8314 this should be preferred over STARTTLS if the server
